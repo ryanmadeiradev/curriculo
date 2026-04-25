@@ -26,7 +26,6 @@ body {
   print-color-adjust: exact;
 }
 
-/* ── Página ── */
 .page {
   max-width: 800px;
   margin: 40px auto;
@@ -34,7 +33,6 @@ body {
   box-shadow: 0 4px 40px rgba(0, 0, 0, 0.10);
 }
 
-/* ── Cabeçalho ── */
 .header {
   display: grid;
   grid-template-columns: 1fr auto;
@@ -112,13 +110,11 @@ body {
   object-position: center top;
 }
 
-/* ── Layout do corpo ── */
 .body {
   display: grid;
   grid-template-columns: 220px 1fr;
 }
 
-/* ── Barra lateral ── */
 .sidebar {
   background: var(--accent);
   padding: 40px 28px;
@@ -202,7 +198,6 @@ body {
   font-style: italic;
 }
 
-/* ── Conteúdo principal ── */
 .main {
   padding: 40px 44px;
 }
@@ -222,7 +217,6 @@ body {
   letter-spacing: -0.2px;
 }
 
-/* Resumo */
 .resumo-text {
   font-size: 13.5px;
   color: var(--ink-soft);
@@ -230,7 +224,6 @@ body {
   margin-top: 14px;
 }
 
-/* Projetos */
 .projeto + .projeto {
   margin-top: 22px;
   padding-top: 22px;
@@ -311,7 +304,6 @@ body {
   font-size: 11px;
 }
 
-/* Experiência */
 .exp-header {
   display: flex;
   justify-content: space-between;
@@ -361,7 +353,6 @@ body {
   font-size: 11px;
 }
 
-/* Faixa do rodapé */
 .footer-strip {
   background: var(--ink);
   padding: 12px 52px;
@@ -376,7 +367,6 @@ body {
   letter-spacing: 0.5px;
 }
 
-/* Botão de impressão */
 .print-btn {
   position: fixed;
   bottom: 2rem;
@@ -399,7 +389,6 @@ body {
   box-shadow: 0 8px 28px rgba(26, 58, 107, 0.45);
 }
 
-/* ── IMPRESSÃO ── */
 @media print {
   body {
     background: white;
@@ -413,4 +402,57 @@ body {
   .print-btn {
     display: none;
   }
+}
+
+@media (max-width: 768px) {
+    .header {
+        display: flex !important;
+        flex-direction: column-reverse !important;
+        align-items: center !important;
+        text-align: center !important;
+        padding: 30px 20px !important;
+        gap: 20px !important;
+    }
+
+    .header-text h1 {
+        white-space: normal !important;
+        font-size: 28px !important;
+    }
+
+    .contacts {
+        align-items: center !important;
+    }
+
+    .photo-wrap {
+        margin: 0 auto !important;
+        width: 120px !important;
+        height: 160px !important;
+    }
+
+    .body {
+        display: block !important;
+    }
+
+    .sidebar {
+        width: 100% !important;
+        padding: 30px 20px !important;
+    }
+
+    .main {
+        width: 100% !important;
+        padding: 30px 20px !important;
+    }
+
+    .projeto-header {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 5px !important;
+    }
+
+    .footer-strip {
+        flex-direction: column !important;
+        gap: 10px !important;
+        text-align: center !important;
+        padding: 20px !important;
+    }
 }
